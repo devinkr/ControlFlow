@@ -27,8 +27,10 @@ public class Switch {
         String month = "XYZ";
         System.out.println(month + " is in the " + getQuarter(month) + " quarter");
 
-        String word = getNato('Z');
-        System.out.println(word);
+       getNato('A');
+
+       // Print day of week
+        printDayOfWeek(7);
     }
 
     public static String getQuarter(String month) {
@@ -46,28 +48,42 @@ public class Switch {
         };
     }
 
-    public static String getNato(char letter) {
-        String word;
+    public static void getNato(char letter) {
         switch(letter) {
             case 'A':
-                word = "Alpha";
+                System.out.println("A is Able");
                 break;
             case 'B':
-                word = "Baker";
+                System.out.println("B is Baker");
                 break;
             case 'C':
-                word = "Charlie";
+                System.out.println("C is Charlie");
                 break;
             case 'D':
-                word = "Dog";
+                System.out.println("D is Dog");
                 break;
             case 'E':
-                word = "Easy";
+                System.out.println("E is Easy");
                 break;
-            default: word = letter + " not found";
+            default:
+                System.out.println(letter + " not found");
         }
-        return word;
     }
 
+    public static void printDayOfWeek(int day) {
+
+        String dayOfWeek = switch( day) {
+            case 0 -> "Sunday";
+            case 1 -> "Monday";
+            case 2 -> { yield "Tuesday"; } // if code block need yield to return
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            case 6 -> "Saturday";
+            default -> "Invalid Day";
+        };
+
+        System.out.println(day + " stands for " + dayOfWeek);
+    }
 
 }
