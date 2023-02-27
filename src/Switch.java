@@ -26,6 +26,9 @@ public class Switch {
 
         String month = "XYZ";
         System.out.println(month + " is in the " + getQuarter(month) + " quarter");
+
+        String word = getNato('Z');
+        System.out.println(word);
     }
 
     public static String getQuarter(String month) {
@@ -41,6 +44,29 @@ public class Switch {
                 yield badResponse; // used in switch expression to return a value
             }
         };
+    }
+
+    public static String getNato(char letter) {
+        String word;
+        switch(letter) {
+            case 'A':
+                word = "Alpha";
+                break;
+            case 'B':
+                word = "Baker";
+                break;
+            case 'C':
+                word = "Charlie";
+                break;
+            case 'D':
+                word = "Dog";
+                break;
+            case 'E':
+                word = "Easy";
+                break;
+            default: word = letter + " not found";
+        }
+        return word;
     }
 
 
