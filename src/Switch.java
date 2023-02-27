@@ -19,7 +19,7 @@ public class Switch {
             case 3, 4, 5 -> {
                 System.out.println("Was a 3, 4, or 5");
                 System.out.println("Actually it was a " + switchValue);
-            } // if break is not here it will continue until a break or end of switch.
+            } // Enhanced switch has no fallthrough so doesn't require breaks.
             default -> System.out.println("Was not 1, 2, 3, 4, or 5");
         }
         // more code here.
