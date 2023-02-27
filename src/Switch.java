@@ -14,18 +14,13 @@ public class Switch {
         // Can use with byte, short, int, char (Byte, Short, Integer, Character) String, and enum;
         int switchValue = 3;
         switch (switchValue) {
-            case 1:
-                System.out.println("Value was 1");
-                break;
-            case 2:
-                System.out.println("Value was 2");
-                break;
-            case 3: case 4: case 5:
+            case 1 -> System.out.println("Value was 1");
+            case 2 -> System.out.println("Value was 2");
+            case 3, 4, 5 -> {
                 System.out.println("Was a 3, 4, or 5");
                 System.out.println("Actually it was a " + switchValue);
-                break; // if break is not here it will continue until a break or end of switch.
-            default:
-                System.out.println("Was not 1, 2, 3, 4, or 5");
+            } // if break is not here it will continue until a break or end of switch.
+            default -> System.out.println("Was not 1, 2, 3, 4, or 5");
         }
         // more code here.
     }
